@@ -3,7 +3,6 @@ import mysql.connector as mysql
 
 app = Flask(__name__)
 
-#Database Connection
 
 mycon=mysql.connect(host="localhost",
                     user="root",
@@ -11,7 +10,6 @@ mycon=mysql.connect(host="localhost",
                     database="shan")
 mycur=mycon.cursor()
 
-#Defining Functions
 
 def add_student(detail_list):
     query="INSERT INTO STUDENTS (name, age, course) VALUES (%s,%s,%s)"
@@ -24,7 +22,6 @@ def view_student(name):
     result=mycur.fetchone()
     return result
 
-#Application
 
 @app.route("/")
 def home():
