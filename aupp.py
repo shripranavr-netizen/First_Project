@@ -25,7 +25,7 @@ def view_student(name):
 
 @app.route("/")
 def home():
-    return render_template("home_student.html")
+    return render_template("index.html")
 
 @app.route("/add")
 def form():
